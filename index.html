@@ -3,127 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Fill Light - Support</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AI Fill Light - Choose Language / 选择语言</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .language-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .app-header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .app-title {
+            font-size: 2rem;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+
+        .app-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .language-selection {
+            display: flex;
+            height: 400px;
+        }
+
+        .language-option {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .language-option:hover {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .language-option::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            transition: top 0.3s ease;
+        }
+
+        .language-option:hover::before {
+            top: 0;
+        }
+
+        .language-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .flag {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .language-name {
+            font-size: 1.8rem;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .language-name-alt {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .divider {
+            width: 1px;
+            background: #e0e0e0;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .language-selection {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .language-option {
+                padding: 60px 20px;
+            }
+
+            .divider {
+                width: 80%;
+                height: 1px;
+                margin: 0 auto;
+            }
+
+            .app-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #4c5bd9 0%, #5a3f8f 100%);
+            }
+
+            .language-container {
+                background: rgba(30, 30, 30, 0.95);
+            }
+
+            .app-header {
+                background: rgba(30, 30, 30, 0.5);
+            }
+
+            .app-title {
+                color: #f5f5f7;
+            }
+
+            .app-subtitle {
+                color: #a1a1a6;
+            }
+
+            .language-name {
+                color: #f5f5f7;
+            }
+
+            .language-name-alt {
+                color: #a1a1a6;
+            }
+
+            .divider {
+                background: #3a3a3c;
+            }
+
+            .language-option:hover {
+                background: rgba(102, 126, 234, 0.1);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>AI Fill Light</h1>
-            <p class="tagline">Professional Lighting for Your Photos & Videos</p>
+    <div class="language-container">
+        <div class="app-header">
+            <div class="app-icon">💡</div>
+            <h1 class="app-title">AI Fill Light</h1>
+            <p class="app-subtitle">Professional Lighting for Your Photos</p>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <section class="hero">
-                <h2>Support Center</h2>
-                <p>Get help with AI Fill Light and make the most of your photography lighting experience.</p>
-            </section>
-
-            <section class="support-content">
-                <div class="card">
-                    <h3>📱 About AI Fill Light</h3>
-                    <p>AI Fill Light transforms your iPhone screen into a customizable photography light source. Perfect for selfies, portraits, video calls, and content creation.</p>
-                    <ul>
-                        <li>6 preset lighting modes optimized for different scenarios</li>
-                        <li>Adjustable saturation and brightness controls</li>
-                        <li>Real-time color preview</li>
-                        <li>Camera integration for enhanced photography</li>
-                    </ul>
+        
+        <div class="language-selection">
+            <a href="zh.html" class="language-option">
+                <div class="language-content">
+                    <div class="flag">🇨🇳</div>
+                    <div class="language-name">中文</div>
+                    <div class="language-name-alt">Chinese</div>
                 </div>
-
-                <div class="card">
-                    <h3>🚀 Getting Started</h3>
-                    <ol>
-                        <li><strong>Choose a Light Mode:</strong> Select from our 6 preset modes:
-                            <ul>
-                                <li>少女感 (Girlish) - Soft pink tones</li>
-                                <li>磨皮感 (Skin Smooth) - Purple smoothing effect</li>
-                                <li>冷白皮 (Cool White) - Cool blue-white tones</li>
-                                <li>百搭光 (Versatile) - Neutral white light</li>
-                                <li>小鸡黄 (Chick Yellow) - Warm yellow light</li>
-                                <li>清新 (Fresh) - Clean blue tones</li>
-                            </ul>
-                        </li>
-                        <li><strong>Adjust Settings:</strong> Use the sliders to fine-tune saturation and brightness</li>
-                        <li><strong>Position Your Device:</strong> Place your phone at the optimal angle for lighting</li>
-                        <li><strong>Capture:</strong> Use the camera feature or another device to take your photo</li>
-                    </ol>
+            </a>
+            
+            <div class="divider"></div>
+            
+            <a href="en.html" class="language-option">
+                <div class="language-content">
+                    <div class="flag">🇺🇸</div>
+                    <div class="language-name">English</div>
+                    <div class="language-name-alt">英文</div>
                 </div>
-
-                <div class="card">
-                    <h3>❓ Frequently Asked Questions</h3>
-                    <div class="faq-item">
-                        <h4>How do I adjust the light intensity?</h4>
-                        <p>Use the brightness slider at the bottom of the screen to control the light intensity. This directly adjusts your screen brightness for maximum light output.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Why does the app need camera access?</h4>
-                        <p>Camera access allows you to capture photos and videos with real-time preview of the lighting effects, helping you achieve the perfect shot.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Can I save my custom settings?</h4>
-                        <p>The app automatically remembers your last used settings when you reopen it.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Does it work with the front camera?</h4>
-                        <p>Yes! AI Fill Light works with both front and rear cameras, making it perfect for selfies and regular photography.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>🔧 Troubleshooting</h3>
-                    <div class="troubleshoot-item">
-                        <h4>The light seems too dim</h4>
-                        <p>• Ensure your screen brightness is at maximum using the in-app slider<br>
-                           • Check that your device's auto-brightness is disabled in Settings<br>
-                           • Clean your screen for maximum light output</p>
-                    </div>
-                    <div class="troubleshoot-item">
-                        <h4>Camera not working</h4>
-                        <p>• Go to Settings > Privacy > Camera and ensure AI Fill Light has permission<br>
-                           • Restart the app after granting permissions<br>
-                           • Check that no other apps are using the camera</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>📧 Contact Support</h3>
-                    <p>Need more help? We're here for you!</p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <h4>Email Support</h4>
-                            <p><a href="mailto:support@weiproduct.com">support@weiproduct.com</a></p>
-                            <p class="response-time">Response within 24-48 hours</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Feature Requests</h4>
-                            <p>Have ideas for new features? Send them to:</p>
-                            <p><a href="mailto:features@weiproduct.com">features@weiproduct.com</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>🔒 Privacy & Security</h3>
-                    <p>Your privacy is our priority:</p>
-                    <ul>
-                        <li>No personal data is collected or stored</li>
-                        <li>Camera access is only used for real-time preview</li>
-                        <li>All processing happens locally on your device</li>
-                        <li>No internet connection required</li>
-                    </ul>
-                </div>
-            </section>
+            </a>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 WeiProduct. All rights reserved.</p>
-            <p>AI Fill Light - Transform your iPhone into a professional photography light</p>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
